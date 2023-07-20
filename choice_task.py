@@ -6,7 +6,7 @@ from rpi_hardware_pwm import HardwarePWM
 from pump import Pump
 
 class Choice:
-    def __init__(self, start_pin = 19, right_pin = 21, left_pin = 23):
+    def __init__(self, start_pin = 10, right_pin = 9, left_pin = 11):
         self.start_button = gpiozero.Button(start_pin)
         self.right_button = gpiozero.Button(right_pin)
         self.left_button = gpiozero.Button(left_pin)
