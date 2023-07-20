@@ -19,12 +19,12 @@ class Choice:
         print("Starting!")
     
 
-    def choice(self, left_option):
+    def choice(self, option):
         while True:
-            if (self.right_button.is_pressed() and left_option==False) or (self.right_button.is_pressed() and left_option==True):
+            if (self.right_button.is_pressed() and option=='Right') or (self.left_button.is_pressed() and option=='Left'):
                 print("Reward Given!")
                 pump.run_forward(50,5)
                 break
-            elif (self.right_button.is_pressed() and left_option==True) or self.left_button.is_pressed() and left_option==False:
+            elif (self.right_button.is_pressed() and option=='Right') or (self.left_button.is_pressed() and option=='Left'):
                 print("Wrong Choice")
                 break
