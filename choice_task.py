@@ -21,9 +21,9 @@ class Choice:
 
     def squirrel_choice(self, ourChoice):
         while True:
-            self.right_button_status = self.right_button.is_pressed()
-            self.left_button_status = self.left_button.is_pressed()
-            if (self.right_button_status == True and ourChoice=='Right') or (self.left_button_status == True and ourChoice=='Left'):
+            # self.right_button_status = self.right_button.is_pressed()
+            # self.left_button_status = self.left_button.is_pressed()
+            if (self.right_button.is_pressed == True and ourChoice=='Right') or (self.left_button.is_pressed == True and ourChoice=='Left'):
                 print("Reward Given!")
                 pump = Pump()
                 pump.run_forward(50,5)
@@ -33,7 +33,7 @@ class Choice:
             #     pump = Pump()
             #     pump.run_forward(50,5)
             #     break
-            elif (self.right_button_status == True and ourChoice=='Right') or (self.left_button_status == True and ourChoice=='Left'):
+            elif (self.right_button.is_pressed == True and ourChoice=='Right') or (self.left_button.is_pressed == True and ourChoice=='Left'):
                 print("Wrong Choice")
                 break
             # elif (self.left_button_status == True and ourChoice=='Left'):
